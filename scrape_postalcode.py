@@ -12,6 +12,7 @@ def parse_into_csv(content):
 		if 'Its zip code is' in i:
 			address = i.split(' is located')[0]
 			zip = i.split(' ')[-1].replace('.','')
+			print "Zip:", zip, "Address:", address
 			break
 	
 	with open('database', 'a+') as f:
